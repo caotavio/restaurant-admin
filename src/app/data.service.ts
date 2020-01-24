@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  public baseUrl = 'http://localhost:7188';
+  public baseUrl = environment.apiEndpoint;
 
   constructor(private http: HttpClient) { }
 
